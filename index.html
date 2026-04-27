@@ -3,205 +3,337 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Beregn netto inntekt som frilanser eller ENK. Inkl. trinnskatt og trygdeavgift 2026.">
-<meta name="keywords" content="skatt kalkulator frilanser, ENK skatt 2026, netto inntekt beregning norge">
-<meta property="og:title" content="Skattkalkulator Selvstendig Næringsdrivende Norge 2026">
-<meta property="og:description" content="Beregn netto inntekt som frilanser eller ENK. Inkl. trinnskatt og trygdeavgift 2026.">
+<meta name="description" content="Beregn netto inntekt som frilanser eller ENK i Norge 2026. Gratis kalkulator med trinnskatt, trygdeavgift og boliglån. Oppdatert 2026-04-27.">
+<meta name="keywords" content="skattkalkulator frilanser norge 2026, ENK skatt beregning, netto inntekt frilanser, trinnskatt kalkulator, trygdeavgift beregning, boliglan manedskostnad norge">
+<meta property="og:title" content="Skattkalkulator Frilanser Norge 2026">
 <meta name="robots" content="index,follow">
-<title>Skattkalkulator Selvstendig Næringsdrivende Norge 2026</title>
+<link rel="canonical" href="https://legion33shadow.github.io/tax-calculator-no/">
+<title>Skattkalkulator Frilanser / ENK Norge 2026 — Netto Inntekt</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5382997898313669" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Skattkalkulator Frilanser Norge 2026", "url": "https://legion33shadow.github.io/tax-calculator-no/", "description": "Beregn netto inntekt som frilanser eller ENK i Norge 2026", "applicationCategory": "FinanceApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "NOK"}, "inLanguage": "no", "dateModified": "2026-04-27"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hvor mye skatt betaler jeg som frilanser i 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Som frilanser eller ENK betaler du fellesskatt (22%), trinnskatt (0–16,6%) og trygdeavgift (7,9%). Samlet effektivt skattenivå er 25–38% av bruttoinntekten."}}, {"@type": "Question", "name": "Hva er trinnskatt i Norge 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Trinnskatt: Trinn 1 (208.050–292.850 kr): 1,7%. Trinn 2 (292.850–670.000 kr): 4,0%. Trinn 3 (670.000–937.900 kr): 13,8%. Trinn 4 (over 937.900 kr): 16,6%."}}, {"@type": "Question", "name": "Hva er minstefradrag i 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Minstefradraget er 46% av lønnsinntekten, maksimalt kr 104.450 i 2026."}}, {"@type": "Question", "name": "Må jeg betale MVA som frilanser?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, hvis omsetningen overstiger kr 50.000/år må du registrere deg i Merverdiavgiftsregisteret og legge 25% MVA på fakturaer."}}]}</script>
 <style>
 :root{--p:#2563eb;--d:#1e40af;--bg:#f8fafc;--card:#fff;--t:#1e293b;--s:#64748b}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--t)}
-header{background:var(--p);color:#fff;padding:1.2rem 1rem;text-align:center}
-header h1{font-size:1.5rem;font-weight:700}
-header p{opacity:.85;font-size:.9rem;margin-top:.3rem}
-.container{max-width:720px;margin:2rem auto;padding:0 1rem}
-.card{background:var(--card);border-radius:12px;padding:1.5rem;
-      box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:1.5rem}
-.card h2{color:var(--p);font-size:1.2rem;margin-bottom:1rem;border-bottom:2px solid var(--p);padding-bottom:.5rem}
-label{display:block;font-size:.85rem;color:var(--s);margin:.8rem 0 .3rem}
-input,select{width:100%;padding:.7rem;border:1.5px solid #e2e8f0;border-radius:8px;
-             font-size:1rem;transition:border .2s}
-input:focus,select:focus{outline:none;border-color:var(--p)}
-button{width:100%;padding:.8rem;background:var(--p);color:#fff;border:none;
-       border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:1rem;
-       transition:background .2s}
-button:hover{background:var(--d)}
-.result{background:#eff6ff;border-left:4px solid var(--p);border-radius:0 8px 8px 0;
-        padding:1rem;margin-top:1rem;display:none}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);
+     color:var(--t);line-height:1.7}
+header{background:linear-gradient(135deg,#1e40af,#2563eb);color:#fff;
+       padding:2rem 1rem;text-align:center}
+header h1{font-size:1.6rem;font-weight:800;margin-bottom:.4rem}
+header p{opacity:.9;font-size:.95rem;max-width:600px;margin:0 auto}
+nav.crumb{background:#fff;padding:.5rem 1rem;font-size:.8rem;color:var(--s);
+           border-bottom:1px solid #e2e8f0}
+nav.crumb a{color:var(--p);text-decoration:none}
+.container{max-width:780px;margin:0 auto;padding:1rem}
+.card{background:var(--card);border-radius:14px;padding:1.6rem;
+      box-shadow:0 2px 16px rgba(0,0,0,.07);margin-bottom:1.5rem}
+.card h2{color:var(--p);font-size:1.15rem;font-weight:700;
+         margin-bottom:1rem;border-bottom:2px solid #bfdbfe;padding-bottom:.5rem}
+.card h3{color:var(--d);font-size:1rem;font-weight:600;margin:1rem 0 .4rem}
+.card p{color:#475569;font-size:.92rem;margin-bottom:.7rem}
+.card ul{padding-left:1.2rem;color:#475569;font-size:.92rem}
+.card ul li{margin-bottom:.4rem}
+label{display:block;font-size:.83rem;color:var(--s);margin:.8rem 0 .3rem;
+      font-weight:500}
+input,select{width:100%;padding:.75rem;border:1.5px solid #e2e8f0;
+             border-radius:9px;font-size:.97rem;transition:border .2s;background:#fff}
+input:focus,select:focus{outline:none;border-color:var(--p);
+                         box-shadow:0 0 0 3px #dbeafe}
+input[readonly]{background:#f1f5f9;color:var(--s)}
+button{width:100%;padding:.85rem;background:var(--p);color:#fff;border:none;
+       border-radius:9px;font-size:1rem;font-weight:700;cursor:pointer;
+       margin-top:1rem;transition:all .2s}
+button:hover{background:var(--d);transform:translateY(-1px);
+             box-shadow:0 4px 12px rgba(37,99,235,.3)}
+.result{background:#eff6ff;border-left:4px solid var(--p);
+        border-radius:0 10px 10px 0;padding:1.1rem;margin-top:1rem;display:none}
 .result.show{display:block}
-.result .big{font-size:1.8rem;font-weight:700;color:var(--p)}
-.result .label{font-size:.8rem;color:var(--s);margin-top:.2rem}
+.result .big{font-size:2rem;font-weight:800;color:var(--p)}
+.result .lbl{font-size:.8rem;color:var(--s);margin-top:.2rem}
+.result .brk{font-size:.83rem;color:#475569;margin-top:.7rem;
+             background:#fff;padding:.6rem;border-radius:7px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.ads{text-align:center;margin:1rem 0}
-footer{text-align:center;padding:2rem 1rem;color:var(--s);font-size:.8rem}
-@media(max-width:480px){.row{grid-template-columns:1fr}}
+.ads{text-align:center;margin:1.2rem 0}
+.faq-item{border-bottom:1px solid #e2e8f0;padding:.9rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;color:var(--t);cursor:pointer;font-size:.95rem;
+        display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"＋";color:var(--p)}
+.faq-item.open .faq-q::after{content:"－"}
+.faq-a{display:none;padding-top:.6rem;color:#475569;font-size:.9rem}
+.faq-item.open .faq-a{display:block}
+.tbl{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.8rem}
+.tbl th{background:#dbeafe;color:var(--d);padding:.5rem .8rem;text-align:left}
+.tbl td{padding:.45rem .8rem;border-bottom:1px solid #e2e8f0}
+.tbl tr:last-child td{border-bottom:none}
+.badge{display:inline-block;background:#dbeafe;color:var(--d);
+       padding:.15rem .5rem;border-radius:4px;font-size:.75rem;
+       font-weight:600;margin-left:.4rem}
+.tip{background:#f0fdf4;border-left:4px solid #22c55e;
+     border-radius:0 8px 8px 0;padding:.9rem 1rem;
+     margin:.8rem 0;font-size:.88rem;color:#166534}
+.warn-box{background:#fefce8;border:1.5px solid #fde68a;
+          border-radius:8px;padding:1rem}
+footer{text-align:center;padding:2.5rem 1rem;color:var(--s);
+       font-size:.8rem;border-top:1px solid #e2e8f0;margin-top:2rem}
+@media(max-width:520px){.row{grid-template-columns:1fr}
+header h1{font-size:1.25rem}}
 </style>
 </head>
 <body>
 <header>
-  <h1>🇳🇴 Skattkalkulator Selvstendig Næringsdrivende Norge 2026</h1>
-  <p>Beregn netto inntekt som frilanser eller ENK. Inkl. trinnskatt og trygdeavgift 2026.</p>
-  <div style="margin-top:.8rem"><a href="#enk" style="color:#fff;margin:0 .5rem;font-size:.85rem">ENK</a><a href="#boliglan" style="color:#fff;margin:0 .5rem;font-size:.85rem">Boliglån</a><a href="#salary" style="color:#fff;margin:0 .5rem;font-size:.85rem">Lønn</a></div>
+  <div style="font-size:.8rem;opacity:.7;margin-bottom:.5rem">🇳🇴 Oppdatert for skatteår 2026</div>
+  <h1>🧮 Skattkalkulator Frilanser Norge 2026</h1>
+  <p>Beregn netto inntekt som ENK eller frilanser på sekunder.<br>
+  Inkluderer trinnskatt, trygdeavgift og minstefradrag 2026.</p>
 </header>
-<div class="ads">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669"
-data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
+<nav class="crumb"><a href="/">Hjem</a> › Skattkalkulator › Frilanser Norge 2026</nav>
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div class="container">
 
-    <div class="card" id="enk">
-      <h2>ENK / Frilanser Netto Inntekt 2026</h2>
-      
-<label>Bruttoinntekt per år (kr)</label>
-<input type="number" id="gross_no" placeholder="600000" min="0">
-<label>Minstefradrag (automatisk)</label>
-<input type="number" id="minste_no" value="104450" readonly style="background:#f1f5f9">
-<button onclick="calcEnk()">Beregn netto inntekt</button>
-<div class="result" id="res_enk">
-  <div class="big" id="netto_no">kr —</div>
-  <div class="label">Netto årslønn (estimat)</div>
-  <div style="margin-top:.8rem;font-size:.85rem;color:#64748b" id="breakdown_no"></div>
+<!-- TOOL 1 : ENK KALKULATOR -->
+<div class="card" id="enk-kalkulator">
+  <h2>💼 ENK / Frilanser Netto Inntekt 2026 <span class="badge">Oppdatert</span></h2>
+  <label>Bruttoinntekt per år (kr)</label>
+  <input type="number" id="gross_no" placeholder="600000" min="0" inputmode="numeric">
+  <label>Minstefradrag (maks kr 104.450 — automatisk)</label>
+  <input type="number" id="minste_no" value="104450" readonly>
+  <div class="tip">
+    💡 <strong>Tips:</strong> Som ENK betaler du trygdeavgift 7,9%.
+    Sett av <strong>30–35%</strong> av inntekten til skatt på en separat konto.
+  </div>
+  <button onclick="calcEnk()">▶ Beregn netto inntekt</button>
+  <div class="result" id="res_enk">
+    <div class="big" id="netto_no">kr —</div>
+    <div class="lbl">Netto årslønn (estimat 2026)</div>
+    <div class="brk" id="breakdown_no"></div>
+  </div>
 </div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- TOOL 2 : BOLIGLAN -->
+<div class="card" id="boliglan">
+  <h2>🏠 Boliglån Månedskostnad Kalkulator</h2>
+  <div class="row">
+    <div>
+      <label>Lånebeløp (kr)</label>
+      <input type="number" id="bl_a" placeholder="3000000" min="0">
+    </div>
+    <div>
+      <label>Rente per år (%)</label>
+      <input type="number" id="bl_r" value="5.8" step="0.1" min="0">
+    </div>
+  </div>
+  <label>Nedbetalingstid</label>
+  <select id="bl_y">
+    <option value="15">15 år</option>
+    <option value="20">20 år</option>
+    <option value="25" selected>25 år</option>
+    <option value="30">30 år</option>
+  </select>
+  <button onclick="calcBL()">▶ Beregn månedskostnad</button>
+  <div class="result" id="res_bl">
+    <div class="big" id="bl_monthly">kr —</div>
+    <div class="lbl">Per måned (annuitetslån)</div>
+    <div class="brk" id="bl_detail"></div>
+  </div>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- TOOL 3 : LONN -->
+<div class="card" id="lonn-kalkulator">
+  <h2>💰 Lønn Netto Kalkulator (Ansatt)</h2>
+  <div class="row">
+    <div>
+      <label>Bruttomånedslønn (kr)</label>
+      <input type="number" id="sal_g" placeholder="60000" min="0">
+    </div>
+    <div>
+      <label>Alder</label>
+      <select id="sal_age">
+        <option value="young">Under 67 år</option>
+        <option value="old">67 år eller eldre</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="calcSal()">▶ Beregn netto lønn</button>
+  <div class="result" id="res_sal">
+    <div class="big" id="sal_netto">kr —</div>
+    <div class="lbl">Netto per måned (estimat)</div>
+    <div class="brk" id="sal_detail"></div>
+  </div>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- GUIDE SEO -->
+<div class="card">
+  <h2>📘 Skatt for frilansere og ENK i Norge 2026</h2>
+  <p>Som <strong>frilanser eller ENK</strong> (Enkeltpersonforetak) i Norge
+  betaler du skatt av din <em>nettoinntekt</em> — omsetning minus kostnader.</p>
+  <h3>Skattekomponenter 2026</h3>
+  <table class="tbl">
+    <tr><th>Skattetype</th><th>Sats</th><th>Grunnlag</th></tr>
+    <tr><td>Fellesskatt</td><td>22%</td><td>Alminnelig inntekt</td></tr>
+    <tr><td>Trygdeavgift</td><td>7,9%</td><td>Personinntekt</td></tr>
+    <tr><td>Trinnskatt trinn 1</td><td>1,7%</td><td>208.050–292.850 kr</td></tr>
+    <tr><td>Trinnskatt trinn 2</td><td>4,0%</td><td>292.850–670.000 kr</td></tr>
+    <tr><td>Trinnskatt trinn 3</td><td>13,8%</td><td>670.000–937.900 kr</td></tr>
+    <tr><td>Trinnskatt trinn 4</td><td>16,6%</td><td>Over 937.900 kr</td></tr>
+  </table>
+  <h3>Praktisk eksempel — kr 600.000 bruttoinntekt</h3>
+  <table class="tbl">
+    <tr><th>Post</th><th>Beløp</th></tr>
+    <tr><td>Bruttoinntekt</td><td>kr 600.000</td></tr>
+    <tr><td>Minstefradrag</td><td>− kr 104.450</td></tr>
+    <tr><td>Fellesskatt (22%)</td><td>− kr 109.021</td></tr>
+    <tr><td>Trygdeavgift (7,9%)</td><td>− kr 47.400</td></tr>
+    <tr><td>Trinnskatt (estimat)</td><td>− kr 17.200</td></tr>
+    <tr><td><strong>Netto inntekt</strong></td><td><strong>≈ kr 422.000 / år</strong></td></tr>
+    <tr><td><strong>Per måned</strong></td><td><strong>≈ kr 35.200</strong></td></tr>
+  </table>
+  <h3>Fradrag du ikke bør glemme</h3>
+  <ul>
+    <li>Hjemmekontor (forholdsmessig andel av husleie/strøm)</li>
+    <li>Datautstyr og programvare (100% yrkesmessig bruk)</li>
+    <li>Reiseutgifter (kr 1,65/km i 2026)</li>
+    <li>Fagbøker, kurs og konferanser</li>
+    <li>Pensjonssparing (inntil 7% av inntekten)</li>
+  </ul>
+  <div class="tip" style="margin-top:1rem">
+    ✅ <strong>Tommelfingerregel:</strong> Sett av <strong>30–35%</strong>
+    av inntekten til skatt på en separat sparekonto.
+  </div>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- FAQ -->
+<div class="card">
+  <h2>❓ Vanlige spørsmål (FAQ)</h2>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">
+      Hva er trinnskatt i 2026?
+    </div>
+    <div class="faq-a">
+      Trinnskatt er en progressiv tilleggsskatt.
+      Trinn 1 (208.050–292.850 kr): 1,7% ·
+      Trinn 2 (292.850–670.000 kr): 4,0% ·
+      Trinn 3 (670.000–937.900 kr): 13,8% ·
+      Trinn 4 (over 937.900 kr): 16,6%.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">
+      Må jeg betale MVA som frilanser?
+    </div>
+    <div class="faq-a">
+      Ja, hvis omsetningen overstiger <strong>kr 50.000/år</strong>.
+      Du legger til 25% MVA på fakturaer og rapporterer kvartalsvis
+      til Skatteetaten.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">
+      Er ENK eller AS mest lønnsomt?
+    </div>
+    <div class="faq-a">
+      Under ca. <strong>kr 500.000–600.000/år</strong> er ENK
+      vanligvis enklest og billigst. Over dette nivået kan AS
+      gi skattefordeler gjennom lavere utbytteskatt.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">
+      Hvordan betaler jeg forskuddsskatt?
+    </div>
+    <div class="faq-a">
+      Som selvstendig næringsdrivende betaler du forskuddsskatt
+      i fire terminer: 15. mars, 15. mai, 15. september og
+      15. november. Skatteetaten sender faktura basert på
+      forrige års inntekt.
+    </div>
+  </div>
+</div>
+
+<div class="card warn-box">
+  <h2 style="color:#92400e">📌 Juridisk forbehold</h2>
+  <p style="color:#78350f;font-size:.88rem">
+    Denne kalkulatoren gir en <strong>estimert beregning</strong> basert
+    på norske skatteregler 2026. Kontakt en regnskapsfører eller
+    skatteadvokat for personlig rådgivning. Sist oppdatert: 2026-04-27.
+  </p>
+</div>
+
+</div>
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer>
+  <p>© 2026 Skattkalkulator Frilanser Norge · Gratis verktøy</p>
+  <p style="margin-top:.4rem;font-size:.75rem">
+    Ikke ment som juridisk eller skattemessig rådgivning · 2026-04-27
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="#enk-kalkulator" style="color:var(--p);font-size:.8rem">ENK Kalkulator</a> ·
+    <a href="#boliglan" style="color:var(--p);font-size:.8rem">Boliglån</a> ·
+    <a href="#lonn-kalkulator" style="color:var(--p);font-size:.8rem">Lønn</a>
+  </p>
+</footer>
+
 <script>
 function calcEnk(){
-  const g=parseFloat(document.getElementById('gross_no').value)||0;
-  const minste=Math.min(104450,g*0.46);
-  const almInnt=Math.max(g-minste,0);
-  let trinnskatt=0;
+  var g=parseFloat(document.getElementById('gross_no').value)||0;
+  var minste=Math.min(104450,g*0.46);
+  var almInnt=Math.max(g-minste,0);
+  var trinnskatt=0;
   if(g>208050)trinnskatt+=(Math.min(g,292850)-208050)*0.017;
   if(g>292850)trinnskatt+=(Math.min(g,670000)-292850)*0.04;
   if(g>670000)trinnskatt+=(Math.min(g,937900)-670000)*0.138;
   if(g>937900)trinnskatt+=(g-937900)*0.166;
-  const trygd=g*0.079;
-  const fellesskatt=almInnt*0.22;
-  const totalTax=trinnskatt+trygd+fellesskatt;
-  const netto=Math.round(g-totalTax);
-  const maaned=Math.round(netto/12);
-  const f=v=>'kr '+Math.round(v).toLocaleString('nb-NO');
+  var trygd=g*0.079;
+  var fellesskatt=almInnt*0.22;
+  var netto=Math.round(g-trygd-trinnskatt-fellesskatt);
+  var maaned=Math.round(netto/12);
+  var perc=g>0?Math.round((1-netto/g)*100):0;
+  function f(v){return 'kr '+Math.round(v).toLocaleString('nb-NO');}
   document.getElementById('netto_no').textContent='kr '+netto.toLocaleString('nb-NO');
   document.getElementById('breakdown_no').innerHTML=
-    'Fellesskatt: '+f(fellesskatt)+' · Trinnskatt: '+f(trinnskatt)+
-    ' · Trygd: '+f(trygd)+' · Per måned: '+f(maaned);
+    '📊 Fellesskatt: '+f(fellesskatt)+' · Trinnskatt: '+f(trinnskatt)+
+    ' · Trygd: '+f(trygd)+'<br>💰 Per måned: '+f(maaned)+
+    ' · Effektiv sats: '+perc+'%';
   document.getElementById('res_enk').className='result show';
 }
-</script>
-    </div>
-    <div class="ads">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669"
-data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
-
-    <div class="card" id="boliglan">
-      <h2>Boliglån Månedskostnad Kalkulator</h2>
-      
-<div class="row">
-<div>
-<label>Lånebeløp (kr)</label>
-<input type="number" id="bl_a" placeholder="3000000" min="0">
-</div>
-<div>
-<label>Rente per år (%)</label>
-<input type="number" id="bl_r" value="5.8" step="0.1" min="0">
-</div>
-</div>
-<label>Nedbetalingstid (år)</label>
-<input type="number" id="bl_y" value="25" min="1" max="30">
-<button onclick="calcBL()">Beregn månedskostnad</button>
-<div class="result" id="res_bl">
-  <div class="big" id="bl_monthly">kr —</div>
-  <div class="label">Per måned</div>
-  <div style="margin-top:.5rem;font-size:.85rem;color:#64748b" id="bl_detail"></div>
-</div>
-<script>
 function calcBL(){
-  const p=parseFloat(document.getElementById('bl_a').value)||0;
-  const r=parseFloat(document.getElementById('bl_r').value)/100/12;
-  const n=parseFloat(document.getElementById('bl_y').value)*12;
-  const m=p*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-  const total=m*n;
-  const f=v=>'kr '+Math.round(v).toLocaleString('nb-NO');
+  var p=parseFloat(document.getElementById('bl_a').value)||0;
+  var r=parseFloat(document.getElementById('bl_r').value)/100/12;
+  var n=parseFloat(document.getElementById('bl_y').value)*12;
+  var m=p*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  function f(v){return 'kr '+Math.round(v).toLocaleString('nb-NO');}
   document.getElementById('bl_monthly').textContent='kr '+Math.round(m).toLocaleString('nb-NO');
   document.getElementById('bl_detail').innerHTML=
-    'Total rente: '+f(total-p)+' · Totalt tilbake: '+f(total);
+    '🏦 Total rente: '+f(m*n-p)+' · Totalt tilbake: '+f(m*n);
   document.getElementById('res_bl').className='result show';
 }
-</script>
-    </div>
-    <div class="ads">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669"
-data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
-
-    <div class="card" id="salary">
-      <h2>Lønn Netto Kalkulator (Ansatt)</h2>
-      
-<label>Bruttomånedslønn (kr)</label>
-<input type="number" id="sal_g" placeholder="60000" min="0">
-<label>Alder</label>
-<select id="sal_age">
-  <option value="young">Under 67 år</option>
-  <option value="old">67 år eller eldre</option>
-</select>
-<button onclick="calcSal()">Beregn netto lønn</button>
-<div class="result" id="res_sal">
-  <div class="big" id="sal_netto">kr —</div>
-  <div class="label">Netto per måned (estimat)</div>
-  <div style="margin-top:.5rem;font-size:.85rem;color:#64748b" id="sal_detail"></div>
-</div>
-<script>
 function calcSal(){
-  const g=parseFloat(document.getElementById('sal_g').value)||0;
-  const yr=g*12;
-  const old=document.getElementById('sal_age').value==='old';
-  const trygdR=old?0.056:0.079;
-  const trygd=yr*trygdR;
-  const minste=Math.min(104450,yr*0.46);
-  const almInnt=Math.max(yr-minste,0);
-  let trinnskatt=0;
+  var g=parseFloat(document.getElementById('sal_g').value)||0;
+  var yr=g*12;
+  var old=document.getElementById('sal_age').value==='old';
+  var trygdR=old?0.056:0.079;
+  var minste=Math.min(104450,yr*0.46);
+  var almInnt=Math.max(yr-minste,0);
+  var trinnskatt=0;
   if(yr>208050)trinnskatt+=(Math.min(yr,292850)-208050)*0.017;
   if(yr>292850)trinnskatt+=(Math.min(yr,670000)-292850)*0.04;
   if(yr>670000)trinnskatt+=(yr-670000)*0.138;
-  const fellesskatt=almInnt*0.22;
-  const netto=Math.round((yr-trygd-trinnskatt-fellesskatt)/12);
-  const f=v=>'kr '+Math.round(v).toLocaleString('nb-NO');
+  var netto=Math.round((yr-yr*trygdR-trinnskatt-almInnt*0.22)/12);
+  function f(v){return 'kr '+Math.round(v).toLocaleString('nb-NO');}
   document.getElementById('sal_netto').textContent='kr '+netto.toLocaleString('nb-NO');
   document.getElementById('sal_detail').innerHTML=
-    'Brutto år: '+f(yr)+' · Trygd: '+f(trygd/12)+'/mnd · Skatt: '+f((fellesskatt+trinnskatt)/12)+'/mnd';
+    'Brutto år: '+f(yr)+' · Trygd: '+f(yr*trygdR/12)+'/mnd';
   document.getElementById('res_sal').className='result show';
 }
+function toggleFaq(el){el.parentElement.classList.toggle('open');}
 </script>
-    </div>
-    <div class="ads">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669"
-data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
-
-  <div class="card" style="background:#eff6ff;border:1.5px solid #bfdbfe">
-    <h2 style="color:#1d4ed8">ℹ️ Over deze calculator</h2>
-    <p style="font-size:.9rem;color:#475569;line-height:1.6">
-      Deze tool geeft een schatting op basis van de regels van 2026.
-      Raadpleeg altijd een belastingadviseur voor definitieve berekeningen.
-      Laatste update: 2026-04-27.
-    </p>
-  </div>
-</div>
-<div class="ads">
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669"
-data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
-<footer>
-  <p>© 2026 Skattkalkulator Selvstendig Næringsdrivende Norge 2026 · Alle berekeningen zijn indicatief</p>
-  <p style="margin-top:.3rem;font-size:.75rem">
-    Niet bedoeld als juridisch of fiscaal advies
-  </p>
-</footer>
 </body>
 </html>
